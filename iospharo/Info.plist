@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+	<key>PharoCodeSize</key>
+	<integer>67108864</integer>
+	<key>PharoEdenSize</key>
+	<integer>10485760</integer>
+	<key>PharoHeadless</key>
+	<false/>
+	<key>PharoImageFile</key>
+	<string>Pharo.image</string>
+	<key>PharoLogLevel</key>
+	<integer>1</integer>
+	<key>PharoMaxOldSpaceSize</key>
+	<integer>536870912</integer>
+	<key>NSMotionUsageDescription</key>
+	<string>Pharo uses device motion sensors (accelerometer, gyroscope, magnetometer) for interactive programs and experiments.</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Pharo Image</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.pharo.image</string>
+			</array>
+		</dict>
+	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Pharo Image</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.pharo.image</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>image</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

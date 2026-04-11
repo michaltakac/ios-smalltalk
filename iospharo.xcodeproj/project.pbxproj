@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E4B3BEE2F0859030064396B /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A90001 /* ZIPFoundation */; };
+		A10001 /* iosparoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001 /* iosparoApp.swift */; };
+		A10002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20002 /* ContentView.swift */; };
+		A10003 /* PharoBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20003 /* PharoBridge.swift */; };
+		A10004 /* MetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20004 /* MetalRenderer.swift */; };
+		A10005 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A20005 /* Shaders.metal */; };
+		A10006 /* PharoCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20006 /* PharoCanvasView.swift */; };
+		A10007 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20007 /* ImageManager.swift */; };
+		A10008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20008 /* Assets.xcassets */; };
+		A10009 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20009 /* Metal.framework */; };
+		A1000A /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2000A /* MetalKit.framework */; };
+		A1000C /* Frameworks/libffi.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2000F /* Frameworks/libffi.xcframework */; };
+		A10012 /* PharoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20012 /* PharoImage.swift */; };
+		A10013 /* ImageLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20013 /* ImageLibraryView.swift */; };
+		A10014 /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20014 /* ImageRow.swift */; };
+		A10015 /* NewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20015 /* NewImageView.swift */; };
+		A10016 /* DownloadProgressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20016 /* DownloadProgressRow.swift */; };
+		A10017 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20017 /* SettingsView.swift */; };
+		A10019 /* AutoLaunchSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20019 /* AutoLaunchSplashView.swift */; };
+		A1001A /* CoreMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2001A /* CoreMotionManager.swift */; };
+		A1001B /* ExportAppSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2001B /* ExportAppSheet.swift */; };
+		A1001C /* AppExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2001C /* AppExporter.swift */; };
+		A1001D /* AppTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2001D /* AppTemplates.swift */; };
+		A1001E /* XcodeProjGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2001E /* XcodeProjGenerator.swift */; };
+		A1001F /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2001F /* AcknowledgementsView.swift */; };
+		A10020 /* WaveShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A20020 /* WaveShaders.metal */; };
+		A10023 /* wavesim.st in Resources */ = {isa = PBXBuildFile; fileRef = A20023 /* wavesim.st */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20001 /* iosparoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosparoApp.swift; sourceTree = "<group>"; };
+		A20002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A20003 /* PharoBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharoBridge.swift; sourceTree = "<group>"; };
+		A20004 /* MetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRenderer.swift; sourceTree = "<group>"; };
+		A20005 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		A20006 /* PharoCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharoCanvasView.swift; sourceTree = "<group>"; };
+		A20007 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		A20008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20009 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		A2000A /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		A2000C /* iospharo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iospharo-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2000D /* iospharo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iospharo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000F /* Frameworks/libffi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Frameworks/libffi.xcframework; sourceTree = SOURCE_ROOT; };
+		A20012 /* PharoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharoImage.swift; sourceTree = "<group>"; };
+		A20013 /* ImageLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryView.swift; sourceTree = "<group>"; };
+		A20014 /* ImageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
+		A20015 /* NewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImageView.swift; sourceTree = "<group>"; };
+		A20016 /* DownloadProgressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadProgressRow.swift; sourceTree = "<group>"; };
+		A20017 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A20018 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		A20019 /* AutoLaunchSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLaunchSplashView.swift; sourceTree = "<group>"; };
+		A2001A /* CoreMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionManager.swift; sourceTree = "<group>"; };
+		A2001B /* ExportAppSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportAppSheet.swift; sourceTree = "<group>"; };
+		A2001C /* AppExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExporter.swift; sourceTree = "<group>"; };
+		A2001D /* AppTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplates.swift; sourceTree = "<group>"; };
+		A2001E /* XcodeProjGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjGenerator.swift; sourceTree = "<group>"; };
+		A2001F /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
+		A20020 /* WaveShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = WaveShaders.metal; sourceTree = "<group>"; };
+		A20023 /* wavesim.st */ = {isa = PBXFileReference; lastKnownFileType = text; name = wavesim.st; path = resources/wavesim.st; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E4B3BEE2F0859030064396B /* ZIPFoundation in Frameworks */,
+				A10009 /* Metal.framework in Frameworks */,
+				A1000A /* MetalKit.framework in Frameworks */,
+				A1000C /* Frameworks/libffi.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40001 = {
+			isa = PBXGroup;
+			children = (
+				A20018 /* Config.xcconfig */,
+				A40002 /* iospharo */,
+				A40008 /* Frameworks */,
+				A40009 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40002 /* iospharo */ = {
+			isa = PBXGroup;
+			children = (
+				A40003 /* App */,
+				A40004 /* Bridge */,
+				A40005 /* Metal */,
+				A40006 /* Views */,
+				A40007 /* Image */,
+				A4000A /* Export */,
+				A4000B /* WaveSim */,
+				A20008 /* Assets.xcassets */,
+				A2000E /* Info.plist */,
+			);
+			path = iospharo;
+			sourceTree = "<group>";
+		};
+		A40003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20001 /* iosparoApp.swift */,
+				A20002 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A40004 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				A20003 /* PharoBridge.swift */,
+				A2001A /* CoreMotionManager.swift */,
+				A2000C /* iospharo-Bridging-Header.h */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		A40005 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				A20004 /* MetalRenderer.swift */,
+				A20005 /* Shaders.metal */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		A40006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A20006 /* PharoCanvasView.swift */,
+				A20013 /* ImageLibraryView.swift */,
+				A20014 /* ImageRow.swift */,
+				A20015 /* NewImageView.swift */,
+				A20016 /* DownloadProgressRow.swift */,
+				A20017 /* SettingsView.swift */,
+				A20019 /* AutoLaunchSplashView.swift */,
+				A2001F /* AcknowledgementsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A40007 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A20007 /* ImageManager.swift */,
+				A20012 /* PharoImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		A40008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A20009 /* Metal.framework */,
+				A2000A /* MetalKit.framework */,
+				A2000F /* Frameworks/libffi.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2000D /* iospharo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4000B /* WaveSim */ = {
+			isa = PBXGroup;
+			children = (
+				A20020 /* WaveShaders.metal */,
+				A20023 /* wavesim.st */,
+			);
+			path = WaveSim;
+			sourceTree = "<group>";
+		};
+		A4000A /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				A2001B /* ExportAppSheet.swift */,
+				A2001C /* AppExporter.swift */,
+				A2001D /* AppTemplates.swift */,
+				A2001E /* XcodeProjGenerator.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50001 /* iospharo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70001 /* Build configuration list for PBXNativeTarget "iospharo" */;
+			buildPhases = (
+				A50004 /* Check XCFramework Freshness */,
+				A50002 /* Sources */,
+				A30001 /* Frameworks */,
+				A50003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iospharo;
+			packageProductDependencies = (
+				A90001 /* ZIPFoundation */,
+			);
+			productName = iospharo;
+			productReference = A2000D /* iospharo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					A50001 = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = A70002 /* Build configuration list for PBXProject "iospharo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A40001;
+			packageReferences = (
+				A80001 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
+			productRefGroup = A40009 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50001 /* iospharo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A50003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10008 /* Assets.xcassets in Resources */,
+				A10023 /* wavesim.st in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A50004 /* Check XCFramework Freshness */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(PROJECT_DIR)/src/vm/ImageLoader.cpp",
+				"$(PROJECT_DIR)/src/vm/ImageLoader.hpp",
+				"$(PROJECT_DIR)/src/vm/ImageWriter.cpp",
+				"$(PROJECT_DIR)/src/vm/ImageWriter.hpp",
+				"$(PROJECT_DIR)/src/vm/Interpreter.cpp",
+				"$(PROJECT_DIR)/src/vm/Interpreter.hpp",
+				"$(PROJECT_DIR)/src/vm/InterpreterProxy.cpp",
+				"$(PROJECT_DIR)/src/vm/InterpreterProxy.h",
+				"$(PROJECT_DIR)/src/vm/ObjectMemory.cpp",
+				"$(PROJECT_DIR)/src/vm/ObjectMemory.hpp",
+				"$(PROJECT_DIR)/src/vm/ObjectHeader.hpp",
+				"$(PROJECT_DIR)/src/vm/Oop.hpp",
+				"$(PROJECT_DIR)/src/vm/Primitives.cpp",
+				"$(PROJECT_DIR)/src/vm/FFI.cpp",
+				"$(PROJECT_DIR)/src/vm/FFI.hpp",
+				"$(PROJECT_DIR)/src/platform/EventQueue.cpp",
+				"$(PROJECT_DIR)/src/platform/EventQueue.hpp",
+				"$(PROJECT_DIR)/src/platform/PlatformBridge.cpp",
+				"$(PROJECT_DIR)/src/platform/PlatformBridge.h",
+				"$(PROJECT_DIR)/src/platform/iOSBridge.cpp",
+				"$(PROJECT_DIR)/src/platform/VMParameters.h",
+				"$(PROJECT_DIR)/Frameworks/PharoVMCore.xcframework/Info.plist",
+			);
+			name = "Check XCFramework Freshness";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Auto-rebuild PharoVMCore.xcframework if VM sources are newer\nXCFRAMEWORK=\"${PROJECT_DIR}/Frameworks/PharoVMCore.xcframework/Info.plist\"\nNEEDS_REBUILD=0\n\nif [ ! -f \"$XCFRAMEWORK\" ]; then\n    echo \"warning: PharoVMCore.xcframework not found, building...\"\n    NEEDS_REBUILD=1\nelse\n    XCF_TIME=$(stat -f %m \"$XCFRAMEWORK\")\n    for src in \"${PROJECT_DIR}/src/vm\"/*.cpp \"${PROJECT_DIR}/src/vm\"/*.hpp \"${PROJECT_DIR}/src/vm\"/*.h \"${PROJECT_DIR}/src/vm/plugins\"/*.cpp \"${PROJECT_DIR}/src/vm/plugins\"/*.h \"${PROJECT_DIR}/src/platform\"/*.cpp \"${PROJECT_DIR}/src/platform\"/*.hpp \"${PROJECT_DIR}/src/platform\"/*.h; do\n        if [ -f \"$src\" ]; then\n            SRC_TIME=$(stat -f %m \"$src\")\n            if [ \"$SRC_TIME\" -gt \"$XCF_TIME\" ]; then\n                echo \"warning: $(basename $src) is newer than xcframework, rebuilding...\"\n                NEEDS_REBUILD=1\n                break\n            fi\n        fi\n    done\nfi\n\nif [ \"$NEEDS_REBUILD\" -eq 1 ]; then\n    echo \"Building PharoVMCore.xcframework...\"\n    cd \"${PROJECT_DIR}\"\n    ./scripts/build-xcframework.sh 2>&1 | tail -5\n    if [ ${PIPESTATUS[0]} -ne 0 ]; then\n        echo \"error: build-xcframework.sh failed\"\n        exit 1\n    fi\n    echo \"PharoVMCore.xcframework rebuilt successfully.\"\nelse\n    echo \"PharoVMCore.xcframework is up-to-date.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A50002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10001 /* iosparoApp.swift in Sources */,
+				A10002 /* ContentView.swift in Sources */,
+				A10003 /* PharoBridge.swift in Sources */,
+				A1001A /* CoreMotionManager.swift in Sources */,
+				A10004 /* MetalRenderer.swift in Sources */,
+				A10005 /* Shaders.metal in Sources */,
+				A10006 /* PharoCanvasView.swift in Sources */,
+				A10007 /* ImageManager.swift in Sources */,
+				A10012 /* PharoImage.swift in Sources */,
+				A10013 /* ImageLibraryView.swift in Sources */,
+				A10014 /* ImageRow.swift in Sources */,
+				A10015 /* NewImageView.swift in Sources */,
+				A10016 /* DownloadProgressRow.swift in Sources */,
+				A10017 /* SettingsView.swift in Sources */,
+				A1001F /* AcknowledgementsView.swift in Sources */,
+				A10019 /* AutoLaunchSplashView.swift in Sources */,
+				A1001B /* ExportAppSheet.swift in Sources */,
+				A1001C /* AppExporter.swift in Sources */,
+				A1001D /* AppTemplates.swift in Sources */,
+				A1001E /* XcodeProjGenerator.swift in Sources */,
+				A10020 /* WaveShaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A70003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20018 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 644N5FNKG2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+			};
+			name = Debug;
+		};
+		A70004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20018 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 644N5FNKG2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A70005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iospharo/iospharo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 124;
+				DEVELOPMENT_TEAM = 644N5FNKG2;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iospharo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pharo Smalltalk";
+				INFOPLIST_KEY_CFBundleName = "Pharo Smalltalk";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "arm64 metal";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					CoreAudio,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					CoreMIDI,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreText,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.awohl.pharo;
+				PRODUCT_NAME = "Pharo Smalltalk";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iospharo/Bridge/iospharo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		A70006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iospharo/iospharo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 124;
+				DEVELOPMENT_TEAM = 644N5FNKG2;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iospharo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pharo Smalltalk";
+				INFOPLIST_KEY_CFBundleName = "Pharo Smalltalk";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "arm64 metal";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					CoreAudio,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					CoreMIDI,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreText,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.awohl.pharo;
+				PRODUCT_NAME = "Pharo Smalltalk";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iospharo/Bridge/iospharo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70001 /* Build configuration list for PBXNativeTarget "iospharo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70005 /* Debug */,
+				A70006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70002 /* Build configuration list for PBXProject "iospharo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70003 /* Debug */,
+				A70004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A80001 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A90001 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80001 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A60001 /* Project object */;
+}

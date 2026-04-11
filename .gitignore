@@ -1,0 +1,117 @@
+# Local configuration (team ID, signing)
+Local.xcconfig
+
+*.pyc
+
+# Build outputs
+*.o
+*.a
+build/
+build-app/
+build-macos/
+build-sim/
+build-vm/
+build-cpp/
+build-test/
+build-nojit/
+build_nojit/
+build-xcframework/
+third-party-build/
+
+# Generated source (large)
+cointerp.c
+
+# Test images (large, downloaded)
+test-images/
+test_images/
+images/
+
+# Reference VM (download separately)
+pharo-vm/
+
+# Pharo runtime data
+pharo-local/
+
+# Stray files
+stdbuf
+pharo
+pharo-ui
+
+# Xcode derived data
+DerivedData/
+*.xcworkspace
+Frameworks/
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Packages/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# VM artifacts
+*.image
+*.changes
+*.sources
+
+# Archives
+*.zip
+*.tar.gz
+
+# Generated source
+src/generated/
+
+# Test binaries and build artifacts
+test_correct_header
+test_correct_header.cpp
+verify_offset
+verify_offset.cpp
+test-cpp-generation/
+*.dSYM/
+src/vm/build/
+src/vm/test_load_image
+build-maccatalyst/
+build-catalyst/
+Pharo.image
+test_vm
+PharoDebug.log
+
+# Crash dumps
+*.dmp
+
+# Pharo debugger artifacts
+Debugger-Stack-*
+serialized-stack
+*.fuel
+
+# Pharo FileTree metadata
+.filetree
+
+# Test leftovers
+test.txt
