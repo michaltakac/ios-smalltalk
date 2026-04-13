@@ -48,7 +48,7 @@
 		A20009 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A2000A /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		A2000C /* iospharo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iospharo-Bridging-Header.h"; sourceTree = "<group>"; };
-		A2000D /* iospharo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iospharo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000D /* Pharo Smalltalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pharo Smalltalk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2000E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2000F /* Frameworks/libffi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Frameworks/libffi.xcframework; sourceTree = SOURCE_ROOT; };
 		A20012 /* PharoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharoImage.swift; sourceTree = "<group>"; };
@@ -175,18 +175,9 @@
 		A40009 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A2000D /* iospharo.app */,
+				A2000D /* Pharo Smalltalk.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A4000B /* WaveSim */ = {
-			isa = PBXGroup;
-			children = (
-				A20020 /* WaveShaders.metal */,
-				A20023 /* wavesim.st */,
-			);
-			path = WaveSim;
 			sourceTree = "<group>";
 		};
 		A4000A /* Export */ = {
@@ -198,6 +189,15 @@
 				A2001E /* XcodeProjGenerator.swift */,
 			);
 			path = Export;
+			sourceTree = "<group>";
+		};
+		A4000B /* WaveSim */ = {
+			isa = PBXGroup;
+			children = (
+				A20020 /* WaveShaders.metal */,
+				A20023 /* wavesim.st */,
+			);
+			path = WaveSim;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +221,7 @@
 				A90001 /* ZIPFoundation */,
 			);
 			productName = iospharo;
-			productReference = A2000D /* iospharo.app */;
+			productReference = A2000D /* Pharo Smalltalk.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -487,7 +487,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 124;
-				DEVELOPMENT_TEAM = 644N5FNKG2;
+				DEVELOPMENT_TEAM = Q9DC849723;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -497,8 +497,10 @@
 				INFOPLIST_FILE = iospharo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pharo Smalltalk";
 				INFOPLIST_KEY_CFBundleName = "Pharo Smalltalk";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "Pharo uses device motion sensors (accelerometer, gyroscope, magnetometer) for interactive programs and experiments.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,6 +508,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,7 +531,7 @@
 					"-framework",
 					Security,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.awohl.pharo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaltakac.pharosim;
 				PRODUCT_NAME = "Pharo Smalltalk";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -547,7 +550,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 124;
-				DEVELOPMENT_TEAM = 644N5FNKG2;
+				DEVELOPMENT_TEAM = Q9DC849723;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -557,8 +560,10 @@
 				INFOPLIST_FILE = iospharo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pharo Smalltalk";
 				INFOPLIST_KEY_CFBundleName = "Pharo Smalltalk";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "Pharo uses device motion sensors (accelerometer, gyroscope, magnetometer) for interactive programs and experiments.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -566,6 +571,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,7 +594,7 @@
 					"-framework",
 					Security,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.awohl.pharo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaltakac.pharosim;
 				PRODUCT_NAME = "Pharo Smalltalk";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
