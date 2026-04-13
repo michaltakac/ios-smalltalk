@@ -679,7 +679,7 @@ class PharoBridge: ObservableObject {
     }
 
     /// Embedded wavesim.st — fallback when the bundle resource isn't available.
-    /// Must stay in sync with resources/wavesim.st (chunk format with ! separators).
+    /// Must stay in sync with experiments/PharoWaveSim/wavesim.st (chunk format with ! separators).
     private static func wavesimScript() -> String {
         // Read from the bundle resource file at runtime instead of embedding.
         // This method is only called if Bundle.main.path failed above, so just

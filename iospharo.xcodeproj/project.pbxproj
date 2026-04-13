@@ -65,8 +65,8 @@
 		A2001D /* AppTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTemplates.swift; sourceTree = "<group>"; };
 		A2001E /* XcodeProjGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjGenerator.swift; sourceTree = "<group>"; };
 		A2001F /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
-		A20020 /* WaveShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = WaveShaders.metal; sourceTree = "<group>"; };
-		A20023 /* wavesim.st */ = {isa = PBXFileReference; lastKnownFileType = text; name = wavesim.st; path = resources/wavesim.st; sourceTree = SOURCE_ROOT; };
+		A20020 /* WaveShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = WaveShaders.metal; path = experiments/PharoWaveSim/WaveShaders.metal; sourceTree = SOURCE_ROOT; };
+		A20023 /* wavesim.st */ = {isa = PBXFileReference; lastKnownFileType = text; name = wavesim.st; path = experiments/PharoWaveSim/wavesim.st; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 				A40006 /* Views */,
 				A40007 /* Image */,
 				A4000A /* Export */,
-				A4000B /* WaveSim */,
+				A4000B /* PharoWaveSim */,
 				A20008 /* Assets.xcassets */,
 				A2000E /* Info.plist */,
 			);
@@ -191,14 +191,15 @@
 			path = Export;
 			sourceTree = "<group>";
 		};
-		A4000B /* WaveSim */ = {
+		A4000B /* PharoWaveSim */ = {
 			isa = PBXGroup;
 			children = (
 				A20020 /* WaveShaders.metal */,
 				A20023 /* wavesim.st */,
 			);
-			path = WaveSim;
-			sourceTree = "<group>";
+			name = PharoWaveSim;
+			path = experiments/PharoWaveSim;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -313,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Auto-rebuild PharoVMCore.xcframework if VM sources are newer\nXCFRAMEWORK=\"${PROJECT_DIR}/Frameworks/PharoVMCore.xcframework/Info.plist\"\nNEEDS_REBUILD=0\n\nif [ ! -f \"$XCFRAMEWORK\" ]; then\n    echo \"warning: PharoVMCore.xcframework not found, building...\"\n    NEEDS_REBUILD=1\nelse\n    XCF_TIME=$(stat -f %m \"$XCFRAMEWORK\")\n    for src in \"${PROJECT_DIR}/src/vm\"/*.cpp \"${PROJECT_DIR}/src/vm\"/*.mm \"${PROJECT_DIR}/src/vm\"/*.hpp \"${PROJECT_DIR}/src/vm\"/*.h \"${PROJECT_DIR}/src/vm/plugins\"/*.cpp \"${PROJECT_DIR}/src/vm/plugins\"/*.h \"${PROJECT_DIR}/src/platform\"/*.cpp \"${PROJECT_DIR}/src/platform\"/*.hpp \"${PROJECT_DIR}/src/platform\"/*.h; do\n        if [ -f \"$src\" ]; then\n            SRC_TIME=$(stat -f %m \"$src\")\n            if [ \"$SRC_TIME\" -gt \"$XCF_TIME\" ]; then\n                echo \"warning: $(basename $src) is newer than xcframework, rebuilding...\"\n                NEEDS_REBUILD=1\n                break\n            fi\n        fi\n    done\nfi\n\nif [ \"$NEEDS_REBUILD\" -eq 1 ]; then\n    echo \"Building PharoVMCore.xcframework...\"\n    cd \"${PROJECT_DIR}\"\n    ./scripts/build-xcframework.sh 2>&1 | tail -5\n    if [ ${PIPESTATUS[0]} -ne 0 ]; then\n        echo \"error: build-xcframework.sh failed\"\n        exit 1\n    fi\n    echo \"PharoVMCore.xcframework rebuilt successfully.\"\nelse\n    echo \"PharoVMCore.xcframework is up-to-date.\"\nfi\n";
+			shellScript = "# Auto-rebuild PharoVMCore.xcframework if VM sources are newer\nXCFRAMEWORK=\"${PROJECT_DIR}/Frameworks/PharoVMCore.xcframework/Info.plist\"\nNEEDS_REBUILD=0\n\nif [ ! -f \"$XCFRAMEWORK\" ]; then\n    echo \"warning: PharoVMCore.xcframework not found, building...\"\n    NEEDS_REBUILD=1\nelse\n    XCF_TIME=$(stat -f %m \"$XCFRAMEWORK\")\n    for src in \"${PROJECT_DIR}/src/vm\"/*.cpp \"${PROJECT_DIR}/src/vm\"/*.mm \"${PROJECT_DIR}/src/vm\"/*.hpp \"${PROJECT_DIR}/src/vm\"/*.h \"${PROJECT_DIR}/src/vm/plugins\"/*.cpp \"${PROJECT_DIR}/src/vm/plugins\"/*.h \"${PROJECT_DIR}/src/platform\"/*.cpp \"${PROJECT_DIR}/src/platform\"/*.hpp \"${PROJECT_DIR}/src/platform\"/*.h \"${PROJECT_DIR}/experiments\"/*/*.mm \"${PROJECT_DIR}/experiments\"/*/*.h; do\n        if [ -f \"$src\" ]; then\n            SRC_TIME=$(stat -f %m \"$src\")\n            if [ \"$SRC_TIME\" -gt \"$XCF_TIME\" ]; then\n                echo \"warning: $(basename $src) is newer than xcframework, rebuilding...\"\n                NEEDS_REBUILD=1\n                break\n            fi\n        fi\n    done\nfi\n\nif [ \"$NEEDS_REBUILD\" -eq 1 ]; then\n    echo \"Building PharoVMCore.xcframework...\"\n    cd \"${PROJECT_DIR}\"\n    ./scripts/build-xcframework.sh 2>&1 | tail -5\n    if [ ${PIPESTATUS[0]} -ne 0 ]; then\n        echo \"error: build-xcframework.sh failed\"\n        exit 1\n    fi\n    echo \"PharoVMCore.xcframework rebuilt successfully.\"\nelse\n    echo \"PharoVMCore.xcframework is up-to-date.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

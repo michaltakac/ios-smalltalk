@@ -10,8 +10,8 @@
 #import <Metal/Metal.h>
 #import <Foundation/Foundation.h>
 #include "WaveSimulation.h"
-#include "../platform/PlatformBridge.h"
-#include "../platform/DisplaySurface.hpp"
+#include "PlatformBridge.h"
+#include "DisplaySurface.hpp"
 #include <cmath>
 #include <cstring>
 #include <mutex>

@@ -51,7 +51,7 @@ set(VM_SOURCES
     src/vm/jit/JITCompiler.cpp
     src/vm/jit/JITRuntime.cpp
     src/vm/jit/TrampolineAsm.S
-    src/vm/WaveSimulation.mm
+    experiments/PharoWaveSim/WaveSimulation.mm
 )
 
 # Ensure the .S file is treated as a C-preprocessed assembly source so the
@@ -62,7 +62,7 @@ set_source_files_properties(src/vm/jit/TrampolineAsm.S PROPERTIES
 
 # Mark Objective-C sources explicitly
 set_source_files_properties(src/vm/ObjCExceptionGuard.m PROPERTIES LANGUAGE OBJC)
-set_source_files_properties(src/vm/WaveSimulation.mm PROPERTIES LANGUAGE OBJCXX)
+set_source_files_properties(experiments/PharoWaveSim/WaveSimulation.mm PROPERTIES LANGUAGE OBJCXX)
 
 # VMMaker-generated C plugins (compiled as C, not C++)
 set(PLUGIN_C_SOURCES
@@ -132,6 +132,7 @@ target_include_directories(PharoVMCore PUBLIC
     ${CMAKE_SOURCE_DIR}/src/vm/plugins/jpeg
     ${CMAKE_SOURCE_DIR}/src/vm/plugins/testlib
     ${CMAKE_SOURCE_DIR}/src/platform
+    ${CMAKE_SOURCE_DIR}/experiments/PharoWaveSim
     ${CMAKE_SOURCE_DIR}/Frameworks/SDL2.xcframework/${XCFRAMEWORK_PLATFORM}/Headers
     ${CMAKE_SOURCE_DIR}/Frameworks/libffi.xcframework/${XCFRAMEWORK_PLATFORM}/Headers
 )

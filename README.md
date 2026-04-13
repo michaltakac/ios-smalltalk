@@ -146,6 +146,7 @@ iospharo/
 ├── src/platform/     Platform abstraction (EventQueue, display)
 ├── src/ios/          Generated interpreter reference (cointerp-cpp.c)
 ├── iospharo/         SwiftUI app (Metal renderer, bridge, views)
+├── experiments/      Self-contained demos (PharoWaveSim, …)
 ├── scripts/          Build scripts (VM xcframework, third-party libraries)
 ├── docs/             Technical reference (bytecode spec, architecture)
 ├── Frameworks/       Built xcframeworks (gitignored)
@@ -249,6 +250,21 @@ Pharo VM:
   control, and statistical reporting.
 - **[Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/measurements/pharo.html)** —
   Pharo entries for binary-trees, mandelbrot, n-body, spectral-norm, etc.
+
+## Experiments
+
+The `experiments/` directory contains self-contained demos that showcase what
+you can build on top of the Pharo VM with native Metal acceleration and
+live Smalltalk coding.
+
+- **[PharoWaveSim](experiments/PharoWaveSim/)** — Interactive 2D wave
+  propagation simulation.  Metal GPU compute drives the physics while
+  Smalltalk handles the UI.  Tap the screen to create waves that propagate,
+  reflect, and interfere in real time.
+
+Each experiment adds its own Smalltalk file (loaded at startup), a Metal
+shader (compiled into the app), and C++/ObjC++ glue registered in the VM's
+FFI cache.  See `experiments/PharoWaveSim/README.md` for the full breakdown.
 
 ## Related
 
