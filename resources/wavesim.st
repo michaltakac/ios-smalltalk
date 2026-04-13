@@ -59,12 +59,12 @@ WaveSimMorph compile: 'initialize
     super initialize.
     gridWidth := 512.
     gridHeight := 384.
-    speed := 0.15.
-    damping := 0.005.
+    speed := 0.3.
+    damping := 0.001.
     colorScheme := 0.
     normalScale := 8.0.
-    sourceStrength := 1.5.
-    sourceRadius := 10.0.
+    sourceStrength := 5.0.
+    sourceRadius := 15.0.
     stepsPerFrame := 3.
     running := true.
     self color: Color transparent.
@@ -92,8 +92,6 @@ WaveSimMorph compile: 'stepTime
     ^ 33' classified: 'stepping'!
 
 WaveSimMorph compile: 'step
-    "Advance sim and render directly to display buffer.
-     Do NOT call self changed — bypass Morphic redraw to avoid flicker."
     running ifFalse: [ ^ self ].
     self ensureInitialized.
     WaveSimFFI wavesimStep: stepsPerFrame.
@@ -179,25 +177,22 @@ WaveSimMorph class compile: 'open
     ^ self openExtent: 800@600' classified: 'instance creation'!
 
 WaveSimMorph class compile: 'openExtent: anExtent
-    | window waveMorph |
+    | waveMorph |
     waveMorph := self new.
     waveMorph extent: anExtent.
-    window := SystemWindow new.
-    window setLabel: ''Wave Simulation (Metal GPU)''.
-    window extent: anExtent + (0@30).
-    window addMorph: waveMorph fullFrame: LayoutFrame identity.
-    window openInWorld.
-    ^ window' classified: 'instance creation'!
+    waveMorph position: 100@50.
+    waveMorph openInWorld.
+    ^ waveMorph' classified: 'instance creation'!
 
 Stdio stderr nextPutAll: '[wavesim] WaveSim classes loaded'; lf; flush!
 
-"Auto-open — click on the canvas to create waves!"
+"Auto-open the wave simulation"
 [
     WaveSimMorph open.
     "Initial demo wave"
     [
         (Delay forMilliseconds: 1500) wait.
-        WaveSimFFI wavesimInjectX: 256.0 y: 192.0 strength: 2.0 radius: 12.0.
+        WaveSimFFI wavesimInjectX: 256.0 y: 192.0 strength: 8.0 radius: 20.0.
     ] fork.
 ] on: Error do: [ :e |
     Stdio stderr nextPutAll: '[wavesim] ERROR: '; nextPutAll: e messageText; lf; flush ]!

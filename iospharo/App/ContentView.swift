@@ -80,6 +80,13 @@ struct ContentView: View {
                let image = imageManager.images.first(where: { $0.id == uuid }) {
                 splashImage = image
                 showingSplash = true
+                return
+            }
+
+            // Priority 3: Single image in library → launch immediately
+            if imageManager.images.count == 1,
+               let image = imageManager.images.first {
+                launchImage(image)
             }
         }
     }

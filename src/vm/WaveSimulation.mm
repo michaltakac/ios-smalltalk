@@ -274,7 +274,7 @@ extern "C" void wavesim_render(void* destPixels, int destPitch,
             float fx = ((float)px + 0.5f) * invW;
             int gx = (int)fx;
 
-            float h = sample(gx, gy);
+            float h = sample(gx, gy) * 5.0f;
 
             // Normal estimation for Blinn-Phong lighting
             float dhdx = (sample(gx + 1, gy) - sample(gx - 1, gy)) * 0.5f * sNormalScale;

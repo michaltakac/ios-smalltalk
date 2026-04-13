@@ -74,6 +74,6 @@ kernel void waveStep(
         }
     }
 
-    n = clamp(n, -2.0f, 2.0f);
+    n = clamp(n, -10.0f, 10.0f);
     nextTex.write(float4(n, 0.0, 0.0, 1.0), gid);
 }
